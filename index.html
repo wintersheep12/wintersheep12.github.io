@@ -2,53 +2,10 @@
 <html>
 <body>
 
-<h1>星水的个人网站</h1>
+<h1>拥有勇气，拥有希望。</h1>
+  
+<h1>人啊，幸福地活下去</h1>
+  
+  
 
-<form>
-  邮箱地址：<input type="email" name="email" required><br>
-  文章标题：<input type="text" name="article-title" required><br>
-  文章内容：<br>
-  <textarea name="article-content" rows="5" cols="40"></textarea><br>
-  <input type="submit" value="提交">
-</form>
-
-<h2>已提交的文章</h2>
-
-<div id="articles"></div>
-
-<script>
-// 定义一个函数，用于添加一篇文章
-function addArticle(title, content) {
-  var articlesDiv = document.getElementById('articles');
-  var articleElement = document.createElement('div');
-  var titleElement = document.createElement('h3');
-  var contentElement = document.createElement('p');
-var deleteButton = document.createElement('button');
-  deleteButton.innerHTML = '删除';
-
-  titleElement.innerHTML = title;
-  contentElement.innerHTML = content
-articleElement.appendChild(titleElement);
-articleElement.appendChild(contentElement);
-articlesDiv.appendChild(articleElement);
-deleteButton.addEventListener('click', function() {
-    articleElement.remove();
-  });
-}
-
-// 提交表单时，添加一篇文章
-var form = document.querySelector('form');
-form.addEventListener('submit', function(event) {
-event.preventDefault(); // 阻止页面跳转
-
-var titleInput = document.querySelector('input[name="article-title"]');
-var contentInput = document.querySelector('textarea[name="article-content"]');
-addArticle(titleInput.value, contentInput.value);
-});
-
-// 添加一篇文章，用于测试
-addArticle('文章标题', '文章内容');
-</script>
-
-</body>
 </html>
